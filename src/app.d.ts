@@ -8,6 +8,9 @@ declare global {
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
+		interface PrivateEnv {
+			ALPHA_VANTAGE_API_KEY: string;
+		}
 	}
 }
 

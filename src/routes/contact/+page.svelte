@@ -54,9 +54,9 @@
   },
   // Second row
   {
+    value: '+86 132 6820 8154',
     icon: '/icons/contacts/whatapp.svg',
     title: 'WhatsApp',
-    value: '+86 132 6820 8154',
     link: 'https://wa.me/8613268208154'
   },
   {

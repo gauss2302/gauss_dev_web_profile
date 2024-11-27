@@ -82,8 +82,8 @@
 						class="container mx-auto px-4 text-center relative z-10"
 						in:fly={{ y: 50, duration: 1000 }}
 					>
-						<h1 class="text-6xl md:text-7xl font-bold text-white mb-6 typing-text">
-							Hi, I'm Nikita
+						<h1 class="text-6xl md:text-7xl font-bold text-white mb-6">
+							<span class="typing">Hi, I'm Nikita</span>
 						</h1>
 
 						<p class="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 fade-in">
@@ -93,7 +93,7 @@
 						<!-- Buttons -->
 						<div class="flex flex-wrap justify-center gap-4 fade-in">
 							<a
-								href="/projects"
+								href="/products"
 								class="px-8 py-3 bg-white text-indigo-600 rounded-lg font-medium
                    hover:bg-opacity-90 transition-all duration-300"
 							>
@@ -220,14 +220,16 @@
 			transform: translate(30px, 30px) rotate(2deg);
 		}
 	}
-	.typing-text {
+	.typing {
+		display: inline-block;
 		overflow: hidden;
 		white-space: nowrap;
-		border-right: 3px solid;
+		border-right: 3px solid white;
 		width: 0;
 		animation:
-			typing 2s steps(13) forwards,
-			blink 0.75s step-end infinite;
+			typing 3s steps(13) forwards,
+			blink 0.75s step-end 6,
+			removeCursor 0s 3.5s forwards; /* Add this line */
 	}
 
 	@keyframes typing {
@@ -249,20 +251,10 @@
 		}
 	}
 
-	.fade-in {
-		opacity: 0;
-		animation: fadeIn 1s forwards;
-		animation-delay: 2s;
-	}
-
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-			transform: translateY(20px);
-		}
+	@keyframes removeCursor {
 		to {
-			opacity: 1;
-			transform: translateY(0);
+			border-color: transparent;
+			border-right: none;
 		}
 	}
 </style>
