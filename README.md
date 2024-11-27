@@ -4,6 +4,10 @@ Everything you need to build a Svelte project, powered by [`create-svelte`](http
 
 ![Alt text](static/rm_images/landing.png)
 
+## Tech Stack
+
+![Alt text](static/rm_images/tech_stack.png)
+
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
